@@ -34,8 +34,7 @@ public class WalkOverTerrainStateMachineBehavior extends AbstractBehavior
 
    private final ReferenceFrame chestFrame;
 
-   public WalkOverTerrainStateMachineBehavior(CommunicationBridge communicationBridge, YoDouble yoTime, FullHumanoidRobotModel fullRobotModel,
-                                              HumanoidReferenceFrames referenceFrames)
+   public WalkOverTerrainStateMachineBehavior(CommunicationBridge communicationBridge, YoDouble yoTime, HumanoidReferenceFrames referenceFrames)
    {
       super(communicationBridge);
 
