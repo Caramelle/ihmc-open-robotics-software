@@ -1,17 +1,18 @@
 package us.ihmc.humanoidBehaviors.behaviors.roughTerrain;
 
 import us.ihmc.communication.packets.Packet;
+import us.ihmc.robotics.geometry.FramePose;
 import us.ihmc.robotics.geometry.FramePose2d;
 
 public class WalkOverTerrainGoalPacket extends Packet<WalkOverTerrainGoalPacket>
 {
-   public FramePose2d goalPose;
+   public FramePose goalPose;
 
    public WalkOverTerrainGoalPacket()
    {
    }
 
-   public WalkOverTerrainGoalPacket(FramePose2d goalPose)
+   public WalkOverTerrainGoalPacket(FramePose goalPose)
    {
       this.goalPose = goalPose;
    }
