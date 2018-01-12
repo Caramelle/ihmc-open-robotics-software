@@ -24,6 +24,10 @@ import us.ihmc.yoVariables.variable.YoBoolean;
 import us.ihmc.yoVariables.variable.YoDouble;
 import us.ihmc.yoVariables.variable.YoInteger;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class WalkOverTerrainStateMachineBehavior extends AbstractBehavior
@@ -93,6 +97,7 @@ public class WalkOverTerrainStateMachineBehavior extends AbstractBehavior
    @Override
    public void onBehaviorExited()
    {
+      stateMachine.setCurrentState(WalkOverTerrainState.PLAN_FOOTSTEPS);
    }
 
    @Override
