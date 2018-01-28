@@ -5,6 +5,7 @@ import us.ihmc.commonWalkingControlModules.bipedSupportPolygons.BipedSupportPoly
 import us.ihmc.commonWalkingControlModules.capturePoint.optimization.ICPOptimizationControllerInterface;
 import us.ihmc.euclid.referenceFrame.FramePoint2D;
 import us.ihmc.euclid.referenceFrame.FrameVector2D;
+import us.ihmc.euclid.referenceFrame.interfaces.FramePoint2DReadOnly;
 import us.ihmc.graphicsDescription.yoGraphics.YoGraphicsListRegistry;
 import us.ihmc.humanoidRobotics.footstep.Footstep;
 import us.ihmc.humanoidRobotics.footstep.FootstepTiming;
@@ -45,7 +46,7 @@ public class ICPBasedLinearMomentumRateOfChangeControlModule extends LeggedLinea
 
    }
 
-   public void computeCMPInternal(FramePoint2D desiredCMPPreviousValue)
+   public void computeCMPInternal(FramePoint2DReadOnly desiredCMPPreviousValue)
    {
       if (supportSide != supportLegPreviousTick.getEnumValue())
       {
