@@ -504,8 +504,6 @@ public class ICPOptimizationController implements ICPOptimizationControllerInter
       this.icpError.set(currentICP);
       this.icpError.sub(desiredICP);
 
-      //updateYoFootsteps();
-
       computeTimeInCurrentState(currentTime);
       computeTimeRemainingInState();
 
