@@ -26,7 +26,9 @@ import us.ihmc.euclid.referenceFrame.FramePoint3D;
 import us.ihmc.euclid.referenceFrame.FrameVector2D;
 import us.ihmc.euclid.referenceFrame.FrameVector3D;
 import us.ihmc.euclid.referenceFrame.ReferenceFrame;
+import us.ihmc.euclid.referenceFrame.interfaces.FrameVector3DReadOnly;
 import us.ihmc.euclid.tuple3D.Vector3D;
+import us.ihmc.euclid.tuple3D.interfaces.Vector3DReadOnly;
 import us.ihmc.graphicsDescription.yoGraphics.YoGraphicPosition;
 import us.ihmc.graphicsDescription.yoGraphics.YoGraphicPosition.GraphicType;
 import us.ihmc.graphicsDescription.yoGraphics.YoGraphicsListRegistry;
@@ -278,17 +280,17 @@ public class BalanceManager
       parentRegistry.addChild(registry);
    }
 
-   public void setMomentumWeight(Vector3D linearWeight)
+   public void setMomentumWeight(Vector3DReadOnly linearWeight)
    {
       linearMomentumRateOfChangeControlModule.setMomentumWeight(linearWeight);
    }
 
-   public void setMomentumWeight(Vector3D angularWeight, Vector3D linearWeight)
+   public void setMomentumWeight(Vector3DReadOnly angularWeight, Vector3DReadOnly linearWeight)
    {
       linearMomentumRateOfChangeControlModule.setMomentumWeight(angularWeight, linearWeight);
    }
 
-   public void setHighMomentumWeightForRecovery(Vector3D highLinearWeight)
+   public void setHighMomentumWeightForRecovery(Vector3DReadOnly highLinearWeight)
    {
       linearMomentumRateOfChangeControlModule.setHighMomentumWeightForRecovery(highLinearWeight);
    }
@@ -745,7 +747,7 @@ public class BalanceManager
       icpPlanner.getFinalDesiredCapturePointPosition(yoFinalDesiredICP);
    }
 
-   public void computeAchievedCMP(FrameVector3D achievedLinearMomentumRate)
+   public void computeAchievedCMP(FrameVector3DReadOnly achievedLinearMomentumRate)
    {
       linearMomentumRateOfChangeControlModule.computeAchievedCMP(achievedLinearMomentumRate, achievedCMP);
       yoAchievedCMP.setAndMatchFrame(achievedCMP);
